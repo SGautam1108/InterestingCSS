@@ -1,0 +1,75 @@
+.loveHateSlider{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.swiper-cards-container{
+    aspect-ratio: 5/7;
+    width: 30vmin;
+}
+
+.swiper-buttons-container{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    width: 30vmin;
+    justify-content: space-around;
+}
+
+.swiper-button{
+    font-size: 3vmin;
+    height: 8vmin;
+    width: 8vmin;
+    border: 0.5vmin solid;
+    border-radius: 100%;
+    display: grid;
+    place-items: center;
+    transition: all 200ms ease-out;
+}
+
+#button-hate{
+    color: white;
+    border-color: white;
+}
+
+#button-love{
+    color: rgb(10, 110, 233);
+    border-color: rgb(10, 110, 233);
+}
+
+#button-hate:hover {
+    box-shadow: 0 0 2rem white;
+    transform: scale(0.9);
+}
+
+#button-love:hover{
+    box-shadow: 0 0 2rem rgb(10, 110, 233);
+    transform: scale(0.9);
+}
+
+
+.hover-cards-group {
+    transition: all 200ms ease-in-out;
+}
+
+.hover-cards-group.active-card{
+    transform: translate(0, 0) scale(1);
+}
+
+.hover-cards-group.inactive-card{
+    transform: translate(0, 0) scale(0);
+}
+
+.hover-cards-group.after-card{
+    transform: translate(50%, 0) scale(0);
+}
+
+.hover-cards-group.before-card{
+    transform: translate(-50%, 0) scale(0);
+}
